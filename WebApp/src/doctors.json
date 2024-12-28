@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. John Doe",
+    "specialization": "Cardiology",
+    "availableDays": ["Monday", "Wednesday", "Friday"],
+    "availableTime": "9:00 AM - 1:00 PM"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Jane Smith",
+    "specialization": "Dermatology",
+    "availableDays": ["Tuesday", "Thursday"],
+    "availableTime": "10:00 AM - 2:00 PM"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Sarah Connor",
+    "specialization": "Neurology",
+    "availableDays": ["Monday", "Thursday"],
+    "availableTime": "1:00 PM - 5:00 PM"
+  }
+]
+

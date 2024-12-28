@@ -1,0 +1,21 @@
+.doc-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .doc-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #4caf50;
+  }
+  
+  .doc-card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
