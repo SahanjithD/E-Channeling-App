@@ -1,24 +1,37 @@
 [
   {
-    "id": 1,
-    "name": "Dr. John Doe",
-    "specialization": "Cardiology",
-    "availableDays": ["Monday", "Wednesday", "Friday"],
-    "availableTime": "9:00 AM - 1:00 PM"
+    "title": "Channel a Physician",
+    "description": "A Physician is a Medical Practitioner who specializes in general or internal medicine (diagnosing & treatment) other than surgical means.",
+    "icon": "🩺"
   },
   {
-    "id": 2,
-    "name": "Dr. Jane Smith",
-    "specialization": "Dermatology",
-    "availableDays": ["Tuesday", "Thursday"],
-    "availableTime": "10:00 AM - 2:00 PM"
+    "title": "Channel a Cardiologist",
+    "description": "A Cardiologist specializes in the structure, functions, and diseases of the heart and blood vessels.",
+    "icon": "❤️"
   },
   {
-    "id": 3,
-    "name": "Dr. Sarah Connor",
-    "specialization": "Neurology",
-    "availableDays": ["Monday", "Thursday"],
-    "availableTime": "1:00 PM - 5:00 PM"
+    "title": "Channel a Gynecologist",
+    "description": "A Gynecologist is a medical specialist who has specialized in the diseases of women & girls, particularly of their female reproductive system.",
+    "icon": "👩‍⚕️"
+  },
+  {
+    "title": "Channel a Pediatrician",
+    "description": "A Pediatrician is a medical practitioner specializing in children and their diseases.",
+    "icon": "👶"
+  },
+  {
+    "title": "Channel a Neurologist",
+    "description": "A Neurologist is a medical doctor who specializes on diseases of the nervous system including the brain and spinal cord.",
+    "icon": "🧠"
+  },
+  {
+    "title": "Channel an Endocrinologist and Diabetologist",
+    "description": "A Physician specializing on the structures and functions of the endocrine glands and the substances they secrete.",
+    "icon": "💉"
+  },
+  {
+    "title": "Channel an Eye Surgeon",
+    "description": "An Eye Surgeon is a medical professional who specializes on the surgical intervention & other remedies for the diseases/disorders of the Eye.",
+    "icon": "👁️"
   }
 ]
-
