@@ -3,6 +3,9 @@ import DocCard from "../components/DocCard";
 import Footer from "../components/Footer";
 import doctorsData from "../doctors.json";
 import doctorImage from '../assets/doctor.png';
+import "./Home.css";
+import SearchBar from "../components/SearchBar";
+import About from "../components/About";
 
 const Dashboard = () => {
   // const [doctors, setDoctors] = useState([]);
@@ -13,11 +16,15 @@ const Dashboard = () => {
   // }, []); 
   return (
     <div>
+      <section id= "HomeSection"></section>
       <div className="banner">
         <div className="banner-content">
           <h1>Doctor Consultation.</h1>
           <p>
-            Connect instantly with a 24x7 specialist or choose to video visit a particular doctor.
+          Access expert medical advice from specialists anytime, anywhere.
+          Our platform connects you with highly qualified doctors from various specialties.
+          Receive personalized care and guidance tailored to your health needs.
+          No waiting rooms, no travel – just seamless, convenient consultations from the comfort of your home.
           </p>
           <div className="banner-buttons">
             <button className="consult-now">Consult Now</button>
@@ -28,8 +35,9 @@ const Dashboard = () => {
           <img src={doctorImage} alt="Doctor" />
         </div>
       </div>
-      <main>
-        <h1>Dashboard</h1>
+      <section id="SearchSection">
+        <h1 style={{ marginLeft: '20px' }}>Top Specialists</h1>
+        <SearchBar />
         <DocCard />
 
         {/* <div className="doc-list">
@@ -41,7 +49,9 @@ const Dashboard = () => {
             <p>No doctors available</p>
           )}
         </div> */}
-      </main>
+      </section>
+      <section id="AboutSection"><About/></section>
+      
       <Footer />
     </div>
   );

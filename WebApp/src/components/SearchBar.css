@@ -1,0 +1,67 @@
+body{
+    font-family: "Montserrat", sans-serif;
+  }
+
+.search-bar {
+    background-color: #007bff;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 93vw;
+    margin: auto;
+  }
+  
+  .search-item {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .search-item label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .search-item input,
+  .search-item select,
+  .search-item button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+  
+.search-item option{
+    opacity: 10%;
+}
+
+  .search-item input[type="text"] {
+    width: 150px;
+  }
+  
+  .search-item input[type="date"] {
+    width: 130px;
+  }
+  
+  .search-item select {
+    width: 150px;
+  }
+  
+  .search-item button {
+    background-color: #ccc;
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 40px;
+  }
+  
+  .search-item button:hover {
+    background-color: #09db5a;
+    color: white;
+  }
+  

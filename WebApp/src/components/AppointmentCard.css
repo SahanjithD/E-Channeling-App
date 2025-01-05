@@ -1,0 +1,44 @@
+.appointment-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .appointment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .appointment-header h3 {
+    margin: 0;
+  }
+  
+  .appointment-header .status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  
+  .appointment-header .status.scheduled {
+    background-color: #4caf50;
+  }
+  
+  .appointment-header .status.completed {
+    background-color: #2196f3;
+  }
+  
+  .appointment-header .status.pending {
+    background-color: #ff9800;
+  }
+  
+  .appointment-details {
+    margin-top: 10px;
+  }
+  
+  .appointment-details p {
+    margin: 5px 0;
+  }
+  

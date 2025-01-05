@@ -3,8 +3,8 @@ import './App.css';
 import Home from './pages/home';
 import SignIn from './pages/signin';
 import SignUp from './pages/SignUp';
-import Banner from "./components/Banner";
 import Header from "./components/Header";
+import Appointments from "./pages/Appointments";
 
 const App = () => {
   return (
@@ -12,9 +12,10 @@ const App = () => {
     
       <Router>
         <Routes>
-          <Route path="/" element={<Header><Home/></Header>} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/Home" element={<Header><Home/></Header>} />
+          <Route path="/Apointments" element={<Header><Appointments/></Header>} />
+          <Route path="/signin" element={<Header><SignIn/></Header>} />
+          <Route path="/signup" element={<Header><SignUp/></Header>} />
         </Routes>
       </Router>
       

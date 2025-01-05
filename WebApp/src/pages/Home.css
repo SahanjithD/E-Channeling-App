@@ -1,6 +1,11 @@
+body{
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
 .banner {
     display: flex;
     width: 100%;
+    height: 80vh;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
@@ -19,17 +24,23 @@
   .banner-content p {
     font-size: 18px;
     color: #606060;
-    margin: 20px 0;
+    margin: 40px 0;
   }
   
   .banner-buttons button {
     padding: 15px 30px;
+    margin-top: 50px;
     margin-right: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   
+  .banner-buttons button:hover {
+    opacity: 0.8;
+  }
+
+
   .consult-now {
     background-color: #007bff;
     color: white;
