@@ -12,7 +12,7 @@ const Header = ({ children }) => {
         </div>
         <ul className="nav-bar">
           <li>
-            <Link to="/Home" className="home-link">Home</Link>
+            <Link to="/" className="home-link">Home</Link>
           </li>
           <li>
             <Link to="/Apointments">My appointments</Link>
