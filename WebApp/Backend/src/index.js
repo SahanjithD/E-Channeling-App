@@ -1,25 +1,7 @@
-const express = require('express');
-const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient();
+const app = require('./app');
 
-const app = express();
-app.use(express.json());
+const PORT = process.env.PORT || 5000;
 
-// Example Route: Fetch All Doctors
-app.get('/doctors', async (req, res) => {
-  const doctors = await prisma.doctor.findMany();
-  res.json(doctors);
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
-
-// // Example Route: Fetch Appointments for a User
-// app.get('/appointments/:userId', async (req, res) => {
-//   const { userId } = req.params;
-//   const appointments = await prisma.appointment.findMany({
-//     where: { userId: parseInt(userId) },
-//     include: { doctor: true },
-//   });
-//   res.json(appointments);
-// });
-
-// Server
-app.listen(5000, () => console.log('Server is running on http://localhost:5000'));
