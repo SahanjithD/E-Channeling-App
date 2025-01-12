@@ -7,11 +7,11 @@ const About = () => {
       <div className="about-content">
         <h1>About</h1>
         <p>
-          Welcome to <strong>E-Channeling</strong>, your one-stop solution for seamless doctor appointments.
+          Welcome to <strong>MyDoc</strong>, your one-stop solution for seamless doctor appointments.
           Our platform is designed to make healthcare more accessible and efficient for everyone.
         </p>
         <p>
-          With E-Channeling, you can browse through a wide range of specialized doctors, check their availability, and book appointments instantly from the comfort of your home.
+          With MyDoc, you can browse through a wide range of specialized doctors, check their availability, and book appointments instantly from the comfort of your home.
         </p>
         <p>
           Whether you're seeking consultation with a physician, cardiologist, pediatrician, or any other specialist, we are here to bridge the gap between patients and healthcare providers.

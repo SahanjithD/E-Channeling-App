@@ -6,7 +6,9 @@ const Banner = () => {
   return (
     <div className="banner">
       <div className="banner-content">
-        <h1>Doctor Consultation.</h1>
+        <div className="logo">  
+          <h1>My<span className="doc-logo">Doc</span></h1>
+        </div>
         <p>
           Connect instantly with a 24x7 specialist or choose to video visit a particular doctor.
         </p>

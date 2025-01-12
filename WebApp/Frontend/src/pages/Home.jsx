@@ -19,16 +19,15 @@ const Dashboard = () => {
       <section id= "HomeSection"></section>
       <div className="banner">
         <div className="banner-content">
-          <h1>Doctor Consultation.</h1>
+          <h1>Welcome to <span className="doc-logo">MyDoc</span></h1>
           <p>
-          Access expert medical advice from specialists anytime, anywhere.
-          Our platform connects you with highly qualified doctors from various specialties.
-          Receive personalized care and guidance tailored to your health needs.
-          No waiting rooms, no travel – just seamless, convenient consultations from the comfort of your home.
+            Your one-stop destination for health and wellness.<br />
+            Find trusted doctors, locate nearby hospitals, and book appointments effortlessly.<br />
+            Experience healthcare like never before – tailored, accessible, and convenient.
           </p>
           <div className="banner-buttons">
-            <button className="consult-now">Consult Now</button>
-            <button className="customer-review">Customer Review</button>
+            <button className="find-hospitals">Find Hospitals</button>
+            <button className="find-doctors">Find Doctors</button>
           </div>
         </div>
         <div className="banner-image">
