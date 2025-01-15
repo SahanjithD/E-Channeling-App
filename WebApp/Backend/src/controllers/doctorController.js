@@ -22,21 +22,20 @@ const searchDoctors = async (req, res) => {
             ? {
                 name: {
                   contains: name,
-                  mode: 'insensitive', // Case-insensitive search
                 },
               }
             : {},
           specialty
             ? {
                 specialty: {
-                  contains: specialty,
-                  mode: 'insensitive',
+                  contains: specialty,           
                 },
               }
             : {},
         ],
       },
     });
+    console.log('Doctors:', doctors);
 
     res.status(200).json(doctors);
   } catch (error) {

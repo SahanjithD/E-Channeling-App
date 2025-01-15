@@ -17,8 +17,22 @@ const getAppointments = async (req, res) => {
 // Create Appointment
 const createAppointment = async (req, res) => {
   try {
+    console.log('Request body:', req.body);
     const { userId, doctorId, date, time } = req.body;
 
+    if (!userId || !doctorId || !date || !time) {
+      return res.status(400).json({ message: 'All fields are required' });
+    }
+
+    // Validate user and doctor existence
+    const userExists = await prisma.user.findUnique({ where: { id: parseInt(userId) } });
+    const doctorExists = await prisma.doctor.findUnique({ where: { id: parseInt(doctorId) } });
+
+    if (!userExists || !doctorExists) {
+      return res.status(400).json({ message: 'Invalid userId or doctorId' });
+    }
+
+    // Create the appointment
     const newAppointment = await prisma.appointment.create({
       data: {
         userId: parseInt(userId),
@@ -30,9 +44,12 @@ const createAppointment = async (req, res) => {
 
     res.status(201).json(newAppointment);
   } catch (error) {
+    console.error('Error creating appointment:', error.message, error.meta);
     res.status(500).json({ message: 'Error creating appointment', error });
   }
 };
+
+
 
 // Delete Appointment
 const deleteAppointment = async (req, res) => {
