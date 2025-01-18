@@ -4,12 +4,51 @@ import "./SearchBar.css";
 const SearchBar = ({ onSearch }) => {
   const [doctorName, setDoctorName] = useState("");
   const [specialization, setSpecialization] = useState("");
-  const [hospital, setHospital] = useState("");
   const [date, setDate] = useState("");
 
-  const handleSearch = () => {
-    // Trigger the search function passed from the parent
-    onSearch({ doctorName, specialization, hospital, date });
+  const specializations = [
+    "Cardiologist",
+    "Dermatologist",
+    "Pediatrician",
+    "Neurologist",
+    "Orthopedic",
+    "General Surgeon",
+    "Obstetrician/Gynecologist",
+    "Ophthalmologist",
+    "Otolaryngologist",
+    "Psychiatrist",
+    "Urologist",
+    "Gastroenterologist",
+    "Endocrinologist",
+    "Nephrologist",
+    "Pulmonologist",
+    "Rheumatologist",
+    "Oncologist",
+    "Allergist/Immunologist",
+    "Infectious Disease Specialist",
+    "Hematologist",
+  ];
+
+  const handleSearch = async () => {
+    try {
+      const queryParams = new URLSearchParams({
+        name: doctorName,
+        specialty: specialization,
+      });
+
+      const response = await fetch(
+        `http://localhost:5000/doctors/search?${queryParams.toString()}`
+      );
+      if (response.ok) {
+        const doctors = await response.json();
+        console.log("Search Results:", doctors);
+        onSearch(doctors); // Pass results to parent component
+      } else {
+        console.error("Error fetching doctors");
+      }
+    } catch (error) {
+      console.error("Error during search:", error);
+    }
   };
 
   return (
@@ -24,6 +63,7 @@ const SearchBar = ({ onSearch }) => {
           onChange={(e) => setDoctorName(e.target.value)}
         />
       </div>
+
       <div className="search-item">
         <label htmlFor="specialization">Specialization</label>
         <select
@@ -32,25 +72,14 @@ const SearchBar = ({ onSearch }) => {
           onChange={(e) => setSpecialization(e.target.value)}
         >
           <option value="">Select Specialization</option>
-          <option value="Cardiology">Cardiology</option>
-          <option value="Neurology">Neurology</option>
-          <option value="Orthopedics">Orthopedics</option>
-          {/* Add more options as needed */}
+          {specializations.map((spec) => (
+            <option key={spec} value={spec}>
+              {spec}
+            </option>
+          ))}
         </select>
       </div>
-      <div className="search-item">
-        <label htmlFor="hospital">Hospital</label>
-        <select
-          id="hospital"
-          value={hospital}
-          onChange={(e) => setHospital(e.target.value)}
-        >
-          <option value="">Select Hospital</option>
-          <option value="City Hospital">City Hospital</option>
-          <option value="General Hospital">General Hospital</option>
-          {/* Add more options as needed */}
-        </select>
-      </div>
+
       <div className="search-item">
         <label htmlFor="date">Date</label>
         <input

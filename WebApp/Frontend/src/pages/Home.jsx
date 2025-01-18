@@ -6,6 +6,8 @@ import doctorImage from '../assets/doctor.png';
 import "./Home.css";
 import SearchBar from "../components/SearchBar";
 import About from "../components/About";
+import SearchResults from "../components/SearchResults";
+import { Link as ScrollLink } from 'react-scroll'; // Import the scroll link
 
 const Dashboard = () => {
   // const [doctors, setDoctors] = useState([]);
@@ -14,6 +16,12 @@ const Dashboard = () => {
   //   console.log("Doctors Data:", doctorsData); // Debugging
   //   setDoctors(doctorsData);
   // }, []); 
+  const [searchResults, setSearchResults] = useState([]);
+
+  // Handler to update search results
+  const handleSearchResults = (results) => {
+    setSearchResults(results);
+  };
   return (
     <div>
       <section id= "HomeSection"></section>
@@ -27,7 +35,11 @@ const Dashboard = () => {
           </p>
           <div className="banner-buttons">
             {/* <button className="find-hospitals">Find Hospitals</button> */}
-            <button className="find-doctors">Find Doctors</button>
+            <ScrollLink   to="SearchSection" 
+                          smooth={true} 
+                          duration={500}>
+              <button className="find-doctors">Find Doctors</button>
+            </ScrollLink>
           </div>
         </div>
         <div className="banner-image">
@@ -36,7 +48,8 @@ const Dashboard = () => {
       </div>
       <section id="SearchSection">
         <h1 style={{ marginLeft: '20px' }}>Top Specialists</h1>
-        <SearchBar />
+        <SearchBar onSearch={handleSearchResults} />
+        <SearchResults results={searchResults} />
         <DocCard />
 
         {/* <div className="doc-list">

@@ -40,15 +40,15 @@ body{
 }
 
   .search-item input[type="text"] {
-    width: 150px;
+    width: 300px;
   }
   
   .search-item input[type="date"] {
-    width: 130px;
+    width: 250px;
   }
   
   .search-item select {
-    width: 150px;
+    width: 300px;
   }
   
   .search-item button {

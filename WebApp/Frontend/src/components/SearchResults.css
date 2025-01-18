@@ -1,0 +1,54 @@
+.search-results {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .no-results {
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+    font-style: italic;
+  }
+  
+  .results-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .result-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .result-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .doctor-name {
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 10px;
+  }
+  
+  .doctor-specialty,
+  .doctor-hospital,
+  .doctor-availability {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .doctor-specialty strong,
+  .doctor-hospital strong,
+  .doctor-availability strong {
+    color: #000;
+  }
+  
