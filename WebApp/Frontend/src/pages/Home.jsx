@@ -26,7 +26,7 @@ const Dashboard = () => {
             Experience healthcare like never before – tailored, accessible, and convenient.
           </p>
           <div className="banner-buttons">
-            <button className="find-hospitals">Find Hospitals</button>
+            {/* <button className="find-hospitals">Find Hospitals</button> */}
             <button className="find-doctors">Find Doctors</button>
           </div>
         </div>

@@ -2,10 +2,16 @@ const express = require('express');
 const userRoutes = require('./routes/userRoutes');
 const doctorRoutes = require('./routes/doctorRoutes');
 const appointmentRoutes = require('./routes/appointmentRoutes');
+const cors = require('cors');
 
 const app = express();
 
 app.use(express.json());
+app.use(cors({
+  origin: "*", // Allow requests from your frontend
+  // methods: ["GET", "POST", "PUT", "DELETE"], // Allow specific HTTP methods
+  // credentials: true // Allow credentials like cookies or authorization headers
+})); 
 
 // Routes
 app.use('/users', userRoutes);

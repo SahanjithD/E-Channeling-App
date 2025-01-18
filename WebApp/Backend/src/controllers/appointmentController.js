@@ -1,23 +1,30 @@
 const prisma = require('../models/prismaClient');
 
-// Get Appointments for a User
+// Get Appointments
 const getAppointments = async (req, res) => {
   try {
     const { userId } = req.params;
+
+    if (!userId || isNaN(userId)) {
+      return res.status(400).json({ message: 'Invalid or missing userId' });
+    }
+
     const appointments = await prisma.appointment.findMany({
       where: { userId: parseInt(userId) },
-      include: { doctor: true },
+      include: { doctor: true }, // Ensure this matches your schema
     });
+
     res.json(appointments);
   } catch (error) {
+    console.error('Error fetching appointments:', error);
     res.status(500).json({ message: 'Error fetching appointments', error });
   }
 };
 
+
 // Create Appointment
 const createAppointment = async (req, res) => {
   try {
-    console.log('Request body:', req.body);
     const { userId, doctorId, date, time } = req.body;
 
     if (!userId || !doctorId || !date || !time) {
