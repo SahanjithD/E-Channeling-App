@@ -1,8 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./SearchResults.css";
-import SearchBar from "./SearchBar";
 
 const SearchResults = ({ results }) => {
+  
+
+  const navigate = useNavigate();
+
+  const handleMakeAppointment = (doctor) => {
+    navigate("/make-appointment", { state: { doctorName: doctor.name } });
+  };
+
   return (
     <div className="search-results">
       {results.length === 0 ? (
@@ -19,8 +27,14 @@ const SearchResults = ({ results }) => {
                 <strong>Hospital:</strong> {doctor.hospital || "N/A"}
               </p>
               <p className="doctor-availability">
-                <strong>Available Date:</strong> {doctor.availableDate || "N/A"}
+                <strong>Available Time:</strong> {doctor.availableTime || "N/A"}
               </p>
+              <button
+                className="make-appointment-button"
+                onClick={() => handleMakeAppointment(doctor)}
+              >
+                Make Appointment
+              </button>
             </li>
           ))}
         </ul>
