@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
-import { AuthProvider } from "./AuthContext";
+import { AuthProvider } from "./AuthContext"; // Import AuthProvider
 import Home from './pages/Home';
 import SignIn from './pages/signin';
 import SignUp from './pages/SignUp';
@@ -10,19 +10,19 @@ import MakeAppointment from "./pages/MakeAppointment";
 
 const App = () => {
   return (
-    <div>
-    
+    <AuthProvider>
       <Router>
-        <Routes>
-          <Route path="/" element={<Header><Home/></Header>} />
-          <Route path="/Apointments" element={<Header><Appointments/></Header>} />
-          <Route path="/signin" element={<Header><SignIn/></Header>} />
-          <Route path="/signup" element={<Header><SignUp/></Header>} />
-          <Route path="/make-appointment" element={<AuthProvider><Header><MakeAppointment/></Header></AuthProvider>} />
-        </Routes>
+        <Header>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/appointments" element={<Appointments />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/make-appointment" element={<MakeAppointment />} />
+          </Routes>
+        </Header>
       </Router>
-      
-    </div>
+    </AuthProvider>
   );
 };
 

@@ -18,7 +18,10 @@ const SignIn = () => {
 
       if (response.ok) {
         const data = await response.json();
+        console.log("Login successful:", data);
         localStorage.setItem("token", data.token); // Store the token
+        localStorage.setItem("userId", data.id); // Store the user ID
+
         alert("Logged in successfully!");
         navigate("/"); // Redirect to home page
       } else {

@@ -8,7 +8,7 @@ const SearchResults = ({ results }) => {
   const navigate = useNavigate();
 
   const handleMakeAppointment = (doctor) => {
-    navigate("/make-appointment", { state: { doctorName: doctor.name } });
+    navigate("/make-appointment", { state: { doctorName: doctor.name, availableTime:doctor.availableTime , doctorId: doctor.id } });
   };
 
   return (
