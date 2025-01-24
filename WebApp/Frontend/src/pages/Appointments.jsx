@@ -12,7 +12,7 @@ const Appointments = () => {
       try {
         const userId = localStorage.getItem('userId'); // Replace with actual user ID retrieval logic
         const token = localStorage.getItem('token');
-        const response = await fetch(`http://localhost:5000/api/appointments/${userId}`, {
+        const response = await fetch(`http://localhost:5000/appointments/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -34,15 +34,57 @@ const Appointments = () => {
     fetchAppointments();
   }, []);
 
-  const deleteAppointment = (id) => {
-    setAppointments(appointments.filter((appointment) => appointment.id !== id));
+  const deleteAppointment = async (id) => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await fetch(`http://localhost:5000/appointments/${id}`, {
+        method: 'DELETE',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+  
+      if (!response.ok) {
+        throw new Error('Failed to delete appointment');
+      }
+  
+      // Remove the appointment from the local state
+      setAppointments(appointments.filter((appointment) => appointment.id !== id));
+    } catch (err) {
+      console.error('Error deleting appointment:', err);
+      setError(err.message);
+    }
   };
+  
 
-  const editAppointment = (id, updatedDetails) => {
+ const editAppointment = async (id, updatedDetails) => {
+  try {
+    const token = localStorage.getItem('token');
+    const response = await fetch(`http://localhost:5000/appointments/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(updatedDetails),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to update appointment');
+    }
+
+    const updatedAppointment = await response.json();
+
+    // Update the appointment in the local state
     setAppointments(appointments.map((appointment) =>
-      appointment.id === id ? { ...appointment, ...updatedDetails } : appointment
+      appointment.id === id ? updatedAppointment : appointment
     ));
-  };
+  } catch (err) {
+    console.error('Error updating appointment:', err);
+    setError(err.message);
+  }
+};
+
 
   if (loading) return <p>Loading appointments...</p>;
   if (error) return <p>Error: {error}</p>;
@@ -69,3 +111,5 @@ const Appointments = () => {
 };
 
 export default Appointments;
+
+

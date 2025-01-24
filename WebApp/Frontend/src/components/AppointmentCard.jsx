@@ -3,14 +3,20 @@ import './AppointmentCard.css';
 
 const AppointmentCard = ({ appointment, onDelete, onEdit }) => {
   const [isEditing, setIsEditing] = useState(false);
+
+  // Handle undefined appointment
+  if (!appointment) {
+    return <div>No appointment details available</div>;
+  }
+
   const [editDetails, setEditDetails] = useState({
-    date: appointment.date,
-    time: appointment.time,
+    date: appointment.date || '',
+    time: appointment.time || '',
   });
 
   const handleEditChange = (e) => {
     const { name, value } = e.target;
-    setEditDetails(prev => ({ ...prev, [name]: value }));
+    setEditDetails((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSaveEdit = () => {
@@ -21,9 +27,9 @@ const AppointmentCard = ({ appointment, onDelete, onEdit }) => {
   return (
     <div className="appointment-card">
       <div className="appointment-header">
-        <h3>{appointment.doctor}</h3>
-        <span className={`status ${appointment.status.toLowerCase()}`}>
-          {appointment.status}
+        <h3>{appointment?.doctor?.name || 'Doctor Name Not Available'}</h3>
+        <span className={`status ${appointment?.status?.toLowerCase()}`}>
+          {appointment?.status || 'Unknown'}
         </span>
       </div>
 
@@ -40,8 +46,8 @@ const AppointmentCard = ({ appointment, onDelete, onEdit }) => {
         </div>
       ) : (
         <div className="appointment-details">
-          <p><strong>Date:</strong> {appointment.date}</p>
-          <p><strong>Time:</strong> {appointment.time}</p>
+          <p><strong>Date:</strong> {appointment.date || 'N/A'}</p>
+          <p><strong>Time:</strong> {appointment.time || 'N/A'}</p>
         </div>
       )}
 

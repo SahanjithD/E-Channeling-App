@@ -15,7 +15,7 @@ const Header = ({ children }) => {
             <Link to="/" className="home-link">Home</Link>
           </li>
           <li>
-            <Link to="/Apointments">My appointments</Link>
+            <Link to="/appointments">My appointments</Link>
           </li>
           <li>
             <ScrollLink 
