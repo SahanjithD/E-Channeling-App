@@ -70,4 +70,31 @@ const deleteAppointment = async (req, res) => {
   }
 };
 
-module.exports = { getAppointments, createAppointment, deleteAppointment };
+// Update Appointment
+const updateAppointment = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { date, time } = req.body;
+
+    if (!id || isNaN(id)) {
+      return res.status(400).json({ message: 'Invalid or missing appointment ID' });
+    }
+
+    if (!date || !time) {
+      return res.status(400).json({ message: 'Date and time are required' });
+    }
+
+    const updatedAppointment = await prisma.appointment.update({
+      where: { id: parseInt(id) },
+      data: { date, time },
+    });
+
+    res.status(200).json(updatedAppointment);
+  } catch (error) {
+    console.error('Error updating appointment:', error);
+    res.status(500).json({ message: 'Error updating appointment', error });
+  }
+};
+
+module.exports = { getAppointments, createAppointment, deleteAppointment, updateAppointment };
+

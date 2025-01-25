@@ -35,15 +35,28 @@ const AppointmentCard = ({ appointment, onDelete, onEdit }) => {
 
       {isEditing ? (
         <div className="appointment-edit">
-          <label>
-            Date: <input name="date" value={editDetails.date} onChange={handleEditChange} />
-          </label>
-          <label>
-            Time: <input name="time" value={editDetails.time} onChange={handleEditChange} />
-          </label>
-          <button onClick={handleSaveEdit}>Save</button>
-          <button onClick={() => setIsEditing(false)}>Cancel</button>
-        </div>
+        <label>
+          Date: 
+          <input 
+            type="date" 
+            name="date" 
+            value={editDetails.date} 
+            onChange={handleEditChange} 
+          />
+        </label>
+        <label>
+          Time: 
+          <input 
+            type="time" 
+            name="time" 
+            value={editDetails.time} 
+            onChange={handleEditChange} 
+          />
+        </label>
+        <button onClick={handleSaveEdit}>Save</button>
+        <button onClick={() => setIsEditing(false)}>Cancel</button>
+      </div>
+      
       ) : (
         <div className="appointment-details">
           <p><strong>Date:</strong> {appointment.date || 'N/A'}</p>

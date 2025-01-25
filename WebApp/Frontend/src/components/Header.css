@@ -51,8 +51,8 @@
   border-bottom: 2px solid #5bc0de;
 } */
 .nav-bar li a:hover {
-  background: rgba(0, 0, 0, 0.06);
-  color: rgba(0, 0, 0, 0.6);
+  background: rgba(59, 59, 59, 0.06);
+  color: rgba(255, 249, 249, 0.6);
   font-weight: 700;
   border-bottom: 2px solid #5bc0de;
 }
@@ -78,17 +78,17 @@
   text-decoration: none;
 }
 
-
-
-
-
+.logout-button,
 .signin-button {
+  margin: 20px 0;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
+  font-size: 16px;
+  color: white;
+  background: #3a7bd5;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .signin-button:hover {

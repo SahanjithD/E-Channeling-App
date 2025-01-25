@@ -56,34 +56,41 @@ const Appointments = () => {
     }
   };
   
-
- const editAppointment = async (id, updatedDetails) => {
-  try {
-    const token = localStorage.getItem('token');
-    const response = await fetch(`http://localhost:5000/appointments/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify(updatedDetails),
-    });
-
-    if (!response.ok) {
-      throw new Error('Failed to update appointment');
+  const editAppointment = async (id, updatedDetails) => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await fetch(`http://localhost:5000/appointments/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(updatedDetails),
+      });
+  
+      if (!response.ok) {
+        throw new Error('Failed to update appointment');
+      }
+  
+      const updatedAppointment = await response.json();
+  
+      // Preserve the doctor field in the frontend
+      setAppointments((prevAppointments) =>
+        prevAppointments.map((appointment) =>
+          appointment.id === id
+            ? {
+                ...appointment, // Preserve existing fields, including doctor
+                ...updatedAppointment, // Override updated fields
+              }
+            : appointment
+        )
+      );
+    } catch (err) {
+      console.error('Error updating appointment:', err);
+      setError(err.message);
     }
-
-    const updatedAppointment = await response.json();
-
-    // Update the appointment in the local state
-    setAppointments(appointments.map((appointment) =>
-      appointment.id === id ? updatedAppointment : appointment
-    ));
-  } catch (err) {
-    console.error('Error updating appointment:', err);
-    setError(err.message);
-  }
-};
+  };
+  
 
 
   if (loading) return <p>Loading appointments...</p>;
@@ -91,7 +98,7 @@ const Appointments = () => {
 
   return (
     <div className="appointments-page">
-      <h1>Your Appointments</h1>
+      <h1 >Your Appointments</h1>
       {appointments.length === 0 ? (
         <p>No appointments found.</p>
       ) : (
