@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:desktop"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -16,41 +17,23 @@
 
         <DockPanel Background="#0078D7" Grid.Row="0">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                <Button Content="Home" Padding="15,5" Margin="10,0" Background="Transparent" Foreground="White"/>
-                <Button Content="Appointments" Padding="15,5" Margin="10,0" Background="Transparent" Foreground="White"/>
-                <Button Content="Find Doctors" Padding="15,5" Margin="10,0" Background="Transparent" Foreground="White"/>
-                <Button Content="About" Padding="15,5" Margin="10,0" Background="Transparent" Foreground="White"/>
+                <Button Content="Home" Padding="15,5" Margin="10,0" Background="Transparent" 
+                        Foreground="White" BorderThickness="0" Click="HomeButton_Click"/>
+                <Button Content="Appointments" Padding="15,5" Margin="10,0"
+                        Background="Transparent" Foreground="White" 
+                        BorderThickness="0" Click="AppointmentsButton_Click"/>              
+
+                <Button Content="Find Doctors" Padding="15,5" Margin="10,0" Background="Transparent" Foreground="White" BorderThickness="0"/>
+                <Button Content="About" Padding="15,5" Margin="10,0" Background="Transparent" 
+                        Foreground="White" BorderThickness="0" Click="AboutButton_Click"/>
+
             </StackPanel>
-            <Button Content="Login" Padding="15,5" Margin="10,0" DockPanel.Dock="Right" Background="Transparent" Foreground="White"/>
+            <Button Content="Logout" Padding="15,5" Margin="10,0" DockPanel.Dock="Right"
+                    Background="Transparent" Foreground="White" BorderThickness="0"
+                    Click="LogoutButton_Click"/>        
+
         </DockPanel>
 
-         <!-- Main Content (Below Taskbar) -->
-        <Grid Grid.Row="1" Margin="20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1.2*"/>
-                <ColumnDefinition Width="0.8*"/>
-            </Grid.ColumnDefinitions>
-
-            <!-- First Column (Text Content) -->
-            <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left">
-                <TextBlock Text="Welcome to MyDoc" FontSize="26" FontWeight="Bold" Foreground="#0078D7"/>
-
-                <TextBlock Text="Your one-stop destination for health and wellness." 
-                           FontSize="14" Margin="0,5,0,0" TextWrapping="Wrap"/>
-
-                <TextBlock Text="Find trusted doctors, locate nearby hospitals, and book appointments effortlessly." 
-                           FontSize="14" Margin="0,5,0,0" TextWrapping="Wrap"/>
-                <TextBlock 
-                    Text="Experience healthcare like never before – tailored, accessible, and convenient." 
-                    FontSize="14" Margin="0,5,0,0" TextWrapping="Wrap"/>
-
-                <Button Content="Find Doctors" Width="150" Height="30" Background="#0078D7" Foreground="White" FontSize="14" HorizontalAlignment="Left" Margin="0,20,0,0"/>
-            </StackPanel>
-
-            <!-- Second Column (Image) -->
-            <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                <Image Source="C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\assets\doctor.png" Width="250" Height="250" Stretch="Uniform"/>
-            </StackPanel>
-        </Grid>
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

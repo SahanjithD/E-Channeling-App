@@ -19,3 +19,15 @@ C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windo
 C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\desktop.pdb
 C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\desktop.genruntimeconfig.cache
 C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\ref\desktop.dll
+C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\AppointmentPage.g.cs
+C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\HomePage.g.cs
+C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\AppointmentPage.baml
+C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\HomePage.baml
+C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\AboutPage.g.cs
+C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\AboutPage.baml
+C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\AuthWindow.g.cs
+C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\LoginPage.g.cs
+C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\SignInPage.g.cs
+C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\AuthWindow.baml
+C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\LoginPage.baml
+C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\SignInPage.baml

@@ -19,6 +19,31 @@ namespace desktop
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Content = new HomePage();
         }
+
+
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new HomePage();
+        }
+
+        private void AppointmentsButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new AppointmentPage());
+        }
+
+        private void AboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new AboutPage());
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            AuthWindow authWindow = new AuthWindow();
+            authWindow.Show();
+            this.Close();
+        }
+
     }
 }
