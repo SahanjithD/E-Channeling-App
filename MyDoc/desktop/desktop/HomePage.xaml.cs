@@ -24,5 +24,13 @@ namespace desktop
         {
             InitializeComponent();
         }
+
+        private void FindDoctorsButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Window.GetWindow(this) is MainWindow mainWindow)
+            {
+                mainWindow.MainFrame.Content = new FindDoctorsPage();
+            }
+        }
     }
 }

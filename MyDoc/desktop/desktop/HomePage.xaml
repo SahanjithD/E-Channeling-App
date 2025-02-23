@@ -29,7 +29,8 @@
                     Text="Experience healthcare like never before – tailored, accessible, and convenient." 
                     FontSize="14" Margin="0,5,0,0" TextWrapping="Wrap"/>
 
-                <Button Content="Find Doctors" Width="150" Height="30" Background="#0078D7" Foreground="White" FontSize="14" HorizontalAlignment="Left" Margin="0,20,0,0"/>
+                <Button Content="Find Doctors" Width="150" Height="30" Background="#0078D7" Foreground="White" FontSize="14" HorizontalAlignment="Left" Margin="0,20,0,0"
+                        Click="FindDoctorsButton_Click"/>
             </StackPanel>
 
             <!-- Second Column (Image) -->

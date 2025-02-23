@@ -33,6 +33,11 @@ namespace desktop
             MainFrame.Navigate(new AppointmentPage());
         }
 
+        private void FindDoctorsButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new FindDoctorsPage());
+        }
+
         private void AboutButton_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new AboutPage());
@@ -45,5 +50,9 @@ namespace desktop
             this.Close();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

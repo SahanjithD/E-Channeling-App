@@ -23,7 +23,9 @@
                         Background="Transparent" Foreground="White" 
                         BorderThickness="0" Click="AppointmentsButton_Click"/>              
 
-                <Button Content="Find Doctors" Padding="15,5" Margin="10,0" Background="Transparent" Foreground="White" BorderThickness="0"/>
+                <Button Content="Find Doctors" Padding="15,5" Margin="10,0" 
+                        Background="Transparent" Foreground="White" BorderThickness="0" 
+                        Click="FindDoctorsButton_Click"/>
                 <Button Content="About" Padding="15,5" Margin="10,0" Background="Transparent" 
                         Foreground="White" BorderThickness="0" Click="AboutButton_Click"/>
 

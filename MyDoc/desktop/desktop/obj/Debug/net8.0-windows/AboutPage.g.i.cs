@@ -53,7 +53,7 @@ namespace desktop {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/desktop;V1.0.0.0;component/aboutpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/desktop;component/aboutpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AboutPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
