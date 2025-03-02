@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./SignUp.css"; // Import the CSS styles
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -10,6 +11,9 @@ const SignUp = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
+  const navigate = useNavigate();
+
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,7 +40,12 @@ const SignUp = () => {
 
       if (response.ok) {
         const result = await response.json();
-        setSuccess("User registered successfully!");
+        setSuccess("User registered successfully! Redirecting to login...");
+
+        setTimeout(() => {
+          navigate("/signin"); // Redirect to login page after 2 seconds
+        }, 2000);
+        
         
         console.log("User Registered:", result);
       } else {
@@ -87,14 +96,17 @@ const SignUp = () => {
             className="signup-input"
             required
           />
-          <input
-            type="text"
-            placeholder="Gender"
+          <select
             value={gender}
             onChange={(e) => setGender(e.target.value)}
-            className="signup-input"
+            className="signup-dropdown"
             required
-          />
+          >
+            <option value="" disabled>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+
           <input
             type="tel"
             placeholder="Phone Number"

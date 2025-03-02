@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./MakeAppointment.css";
 import { use } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MakeAppointment = () => {
   const location = useLocation();
@@ -14,7 +15,7 @@ const MakeAppointment = () => {
   
   const userId = localStorage.getItem("userId");
 
-  
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -43,6 +44,8 @@ const MakeAppointment = () => {
       const data = await response.json();
       console.log("Appointment successfully created:", data);
       alert("Appointment created successfully!");
+      navigate("/appointments");
+      
     } catch (error) {
       console.error("Error creating appointment:", error.message);
       alert("Failed to create appointment. Please try again.");
