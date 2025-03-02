@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|c:\\users\\asus\\documents\\gui project\\mydoc\\desktop\\desktop\\finddoctorspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|solutionrelative:desktop\\finddoctorspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|c:\\users\\asus\\documents\\gui project\\mydoc\\desktop\\desktop\\signinpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|solutionrelative:desktop\\signinpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|c:\\users\\asus\\documents\\gui project\\mydoc\\desktop\\desktop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|solutionrelative:desktop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|c:\\users\\asus\\documents\\gui project\\mydoc\\desktop\\desktop\\signinpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|solutionrelative:desktop\\signinpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|c:\\users\\asus\\documents\\gui project\\mydoc\\desktop\\desktop\\finddoctorspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|solutionrelative:desktop\\finddoctorspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|c:\\users\\asus\\documents\\gui project\\mydoc\\desktop\\desktop\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|solutionrelative:desktop\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|c:\\users\\asus\\documents\\gui project\\mydoc\\desktop\\desktop\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|solutionrelative:desktop\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|c:\\users\\asus\\documents\\gui project\\mydoc\\desktop\\desktop\\finddoctorspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|solutionrelative:desktop\\finddoctorspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|c:\\users\\asus\\documents\\gui project\\mydoc\\desktop\\desktop\\authwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|solutionrelative:desktop\\authwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +43,83 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FindDoctorsPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\FindDoctorsPage.xaml.cs",
-              "RelativeDocumentMoniker": "desktop\\FindDoctorsPage.xaml.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\FindDoctorsPage.xaml.cs",
-              "RelativeToolTip": "desktop\\FindDoctorsPage.xaml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "SignInPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\SignInPage.xaml.cs",
+              "RelativeDocumentMoniker": "desktop\\SignInPage.xaml.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\SignInPage.xaml.cs",
+              "RelativeToolTip": "desktop\\SignInPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T13:17:14.907Z",
+              "WhenOpened": "2025-03-02T05:51:56.161Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "desktop\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\MainWindow.xaml.cs",
-              "RelativeToolTip": "desktop\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T13:14:50.686Z",
-              "EditorCaption": ""
+              "Title": "SignInPage.xaml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\SignInPage.xaml",
+              "RelativeDocumentMoniker": "desktop\\SignInPage.xaml",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\SignInPage.xaml",
+              "RelativeToolTip": "desktop\\SignInPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T05:51:49.568Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "desktop\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\LoginPage.xaml",
+              "RelativeToolTip": "desktop\\LoginPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T05:51:43.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\MainWindow.xaml",
               "RelativeDocumentMoniker": "desktop\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\MainWindow.xaml",
               "RelativeToolTip": "desktop\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-23T13:14:21.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-02T05:51:07.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FindDoctorsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\FindDoctorsPage.xaml.cs",
+              "RelativeDocumentMoniker": "desktop\\FindDoctorsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\FindDoctorsPage.xaml.cs",
+              "RelativeToolTip": "desktop\\FindDoctorsPage.xaml.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T18:15:44.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FindDoctorsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\FindDoctorsPage.xaml",
+              "RelativeDocumentMoniker": "desktop\\FindDoctorsPage.xaml",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\FindDoctorsPage.xaml",
+              "RelativeToolTip": "desktop\\FindDoctorsPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-01T18:15:06.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\AuthWindow.xaml.cs",
+              "RelativeDocumentMoniker": "desktop\\AuthWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\AuthWindow.xaml.cs",
+              "RelativeToolTip": "desktop\\AuthWindow.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAmwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T12:40:58.428Z"
             }
           ]
         }

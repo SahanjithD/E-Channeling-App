@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll'; // Import the scroll link
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Header.css";
 
 
@@ -8,6 +8,8 @@ import "./Header.css";
 
 const Header = ({ children }) => {
   const isLoggedIn = localStorage.getItem("token") ? true : false; // Check if the user is logged in
+  const location = useLocation(); // Get the current location
+  const navigate = useNavigate(); // Get the navigate function
 
   const handleLogout = () => {
     // Clear user data from storage
@@ -27,6 +29,20 @@ const Header = ({ children }) => {
     window.location.href = "/"; // Replace '/login' with the desired route
   };
   
+  const handleScroll = (sectionId) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 100); // Delay ensures navigation completes first
+    } else {
+      scrollToSection(sectionId);
+    }
+  };
+
+  const scrollToSection = (sectionId) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+  };
   
   return (
     <div>
@@ -42,22 +58,15 @@ const Header = ({ children }) => {
             <Link to="/appointments">My appointments</Link>
           </li>
           <li>
-            <ScrollLink 
-              to="SearchSection" 
-              smooth={true} 
-              duration={500}
-            >
+            <span onClick={() => handleScroll("SearchSection")} style={{ cursor: "pointer" }}>
               Find Doctors
-            </ScrollLink>
+            </span>
           </li>
           <li>
-            <ScrollLink 
-              to="AboutSection" 
-              smooth={true} 
-              duration={500}
-            >
+            
+            <span onClick={() => handleScroll("AboutSection")} style={{ cursor: "pointer" }} className="about-link">
               About
-            </ScrollLink>
+            </span>
           </li>
         </ul>
         <nav>

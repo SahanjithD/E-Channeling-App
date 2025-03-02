@@ -28,6 +28,16 @@
   gap: 20px;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  color: #5bc0de;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 2px;
+  transition: background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  margin: 4px;
 
 }
 
@@ -50,7 +60,7 @@
   font-weight: 700;
   border-bottom: 2px solid #5bc0de;
 } */
-.nav-bar li a:hover {
+.nav-bar li :hover {
   background: rgba(59, 59, 59, 0.06);
   color: rgba(255, 249, 249, 0.6);
   font-weight: 700;
