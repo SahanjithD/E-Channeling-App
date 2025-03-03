@@ -9,7 +9,39 @@
       Title="AppointmentPage">
 
     <Grid>
-        <TextBlock Text="Appointment Page" FontSize="24" 
-                   Foreground="#0078D7" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+
+        <TextBlock Text="My Appointments" FontSize="24" 
+                   Foreground="#0078D7" HorizontalAlignment="Center" 
+                   Margin="10" Grid.Row="0"/>
+
+        <DataGrid x:Name="AppointmentsDataGrid" 
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  Height="250" Width="600" HorizontalAlignment="Center"
+                  SelectionMode="Single"
+                  ItemsSource="{Binding Appointments}">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Doctor Name" Binding="{Binding DoctorName}" Width="*"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
+                <DataGridTextColumn Header="Time" Binding="{Binding Time}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Content="Edit" Width="100" Margin="5"
+                    Height="20"
+                    Background="#0078D7" Click="EditAppointment"/>
+            <Button Content="Delete" Width="100" Margin="5" 
+                    Height="20"
+                    Background="#0078D7" Click="DeleteAppointment"/>
+        </StackPanel>
     </Grid>
 </Page>

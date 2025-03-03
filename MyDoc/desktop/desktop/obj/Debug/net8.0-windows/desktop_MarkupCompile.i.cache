@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\App.xaml
-9-442985216
+101840793097
 
-14-438953584
+15-632172972
 198-352714763
-AboutPage.xaml;AppointmentPage.xaml;AuthWindow.xaml;FindDoctorsPage.xaml;HomePage.xaml;LoginPage.xaml;MainWindow.xaml;MakeAppointmentWindow.xaml;SignInPage.xaml;
+AboutPage.xaml;AppointmentPage.xaml;AuthWindow.xaml;EditAppointmentWindow.xaml;FindDoctorsPage.xaml;HomePage.xaml;LoginPage.xaml;MainWindow.xaml;MakeAppointmentWindow.xaml;SignInPage.xaml;
 
 False
 

@@ -16,6 +16,9 @@
     <Compile Update="AuthWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="EditAppointmentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="HomePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -34,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="AuthWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditAppointmentWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="HomePage.xaml">

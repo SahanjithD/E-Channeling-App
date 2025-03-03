@@ -74,6 +74,16 @@ namespace desktop
                     // Store the token (you might want to use a more secure storage method)
                     App.Current.Properties["AuthToken"] = loginResponse.Token;
                     App.Current.Properties["UserId"] = loginResponse.Id;
+                    if (App.Current.Properties.Contains("AuthToken"))
+                    {
+                        string token = App.Current.Properties["AuthToken"]?.ToString();
+                        MessageBox.Show("token");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Authentication token is missing. Please log in again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+
 
                     // Navigate to main window
                     if (Window.GetWindow(this) is AuthWindow authWindow)

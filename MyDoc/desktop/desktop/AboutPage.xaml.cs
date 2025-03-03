@@ -23,6 +23,7 @@ namespace desktop
         public AboutPage()
         {
             InitializeComponent();
+
         }
     }
 }

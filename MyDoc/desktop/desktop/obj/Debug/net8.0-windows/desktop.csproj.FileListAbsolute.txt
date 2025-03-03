@@ -35,3 +35,5 @@ C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windo
 C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\MakeAppointmentWindow.g.cs
 C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\FindDoctorsPage.baml
 C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\MakeAppointmentWindow.baml
+C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\EditAppointmentWindow.g.cs
+C:\Users\ASUS\Documents\GUI Project\MyDoc\desktop\desktop\obj\Debug\net8.0-windows\EditAppointmentWindow.baml
