@@ -1,104 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|c:\\users\\asus\\documents\\gui project\\mydoc\\desktop\\desktop\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|solutionrelative:desktop\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|c:\\users\\asus\\documents\\gui project\\mydoc\\desktop\\desktop\\editappointmentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|solutionrelative:desktop\\editappointmentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|c:\\users\\asus\\documents\\gui project\\mydoc\\desktop\\desktop\\appointmentpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|solutionrelative:desktop\\appointmentpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|c:\\users\\asus\\documents\\gui project\\mydoc\\desktop\\desktop\\aboutpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|solutionrelative:desktop\\aboutpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|c:\\users\\asus\\documents\\gui project\\mydoc\\desktop\\desktop\\appointmentpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0010816E-3F81-4473-B2EE-4B7FA53D12E3}|desktop\\desktop.csproj|solutionrelative:desktop\\appointmentpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 4,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EditAppointmentWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\EditAppointmentWindow.xaml.cs",
-              "RelativeDocumentMoniker": "desktop\\EditAppointmentWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\EditAppointmentWindow.xaml.cs",
-              "RelativeToolTip": "desktop\\EditAppointmentWindow.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T19:10:45.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AboutPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\AboutPage.xaml.cs",
-              "RelativeDocumentMoniker": "desktop\\AboutPage.xaml.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\AboutPage.xaml.cs",
-              "RelativeToolTip": "desktop\\AboutPage.xaml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T18:32:09.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppointmentPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\AppointmentPage.xaml.cs",
-              "RelativeDocumentMoniker": "desktop\\AppointmentPage.xaml.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\AppointmentPage.xaml.cs",
-              "RelativeToolTip": "desktop\\AppointmentPage.xaml.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAgwDIAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T17:50:45.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppointmentPage.xaml",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\AppointmentPage.xaml",
-              "RelativeDocumentMoniker": "desktop\\AppointmentPage.xaml",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\AppointmentPage.xaml",
-              "RelativeToolTip": "desktop\\AppointmentPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-03T17:33:56.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LoginPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\LoginPage.xaml.cs",
-              "RelativeDocumentMoniker": "desktop\\LoginPage.xaml.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Documents\\GUI Project\\MyDoc\\desktop\\desktop\\LoginPage.xaml.cs",
-              "RelativeToolTip": "desktop\\LoginPage.xaml.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAABoAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T17:57:34.596Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

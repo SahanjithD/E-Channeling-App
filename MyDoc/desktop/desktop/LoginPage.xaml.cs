@@ -72,17 +72,10 @@ namespace desktop
                     var loginResponse = JsonSerializer.Deserialize<LoginResponse>(responseContent);
 
                     // Store the token (you might want to use a more secure storage method)
-                    App.Current.Properties["AuthToken"] = loginResponse.Token;
-                    App.Current.Properties["UserId"] = loginResponse.Id;
-                    if (App.Current.Properties.Contains("AuthToken"))
-                    {
-                        string token = App.Current.Properties["AuthToken"]?.ToString();
-                        MessageBox.Show("token");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Authentication token is missing. Please log in again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
+                    App.Current.Properties["AuthToken"] = loginResponse.token;
+                    App.Current.Properties["UserId"] = loginResponse.id;
+                    MessageBox.Show(loginResponse.id.ToString());
+                    
 
 
                     // Navigate to main window
@@ -118,8 +111,8 @@ namespace desktop
 // Response models
 public class LoginResponse
 {
-    public string Token { get; set; }
-    public string Id { get; set; }
+    public string token { get; set; }
+    public int id { get; set; }
 }
 
 public class ErrorResponse
