@@ -7,7 +7,7 @@ const SignInOverlay = ({ onClose }) => {
       <div className="overlay-background" onClick={onClose}></div>
       <div className="overlay-content">
         <h2>Please Sign In</h2>
-        <p>You need to sign in to see this content.</p>
+        <p>You need to sign in to do this.</p>
         <button className="overlay-button" onClick={onClose}>
           Sign In
         </button>

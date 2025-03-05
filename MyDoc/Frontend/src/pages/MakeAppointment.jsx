@@ -1,57 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./MakeAppointment.css";
-import { use } from "react";
-import { useNavigate } from "react-router-dom";
+import SignInOverlay from "../components/SignInOverlay";
 
 const MakeAppointment = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const doctorName = location.state?.doctorName || "Unknown";
   const availableTime = location.state?.availableTime || "9am-5pm"; // Default time range
   const doctorId = location.state?.doctorId || "1";
-
+  
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [showSignInOverlay, setShowSignInOverlay] = useState(false);
   const [timeOptions, setTimeOptions] = useState([]);
-
-  
-  const userId = localStorage.getItem("userId");
-
-  const navigate = useNavigate();
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const appointmentData = {
-      userId: userId, // Replace with the logged-in user's ID
-      doctorId: doctorId, // Replace with the selected doctor's ID
-      date: e.target.date.value,
-      time: e.target.time.value,
-    };
-  
-    try {
-      const response = await fetch("http://localhost:5000/appointments", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`, // Include the token
-        },
-        body: JSON.stringify(appointmentData),
-      });
-  
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Failed to create appointment");
-      }
-  
-      const data = await response.json();
-      console.log("Appointment successfully created:", data);
-      alert("Appointment created successfully!");
-      navigate("/appointments");
-      
-    } catch (error) {
-      console.error("Error creating appointment:", error.message);
-      alert("Failed to create appointment. Please try again.");
-    }
-  };
-  
+  const [loading, setLoading] = useState(true);
 
   // Function to generate 20-minute intervals
   const generateTimeOptions = (timeRange) => {
@@ -87,8 +49,87 @@ const MakeAppointment = () => {
   };
 
   useEffect(() => {
+    // Check if user is authenticated
+    const token = localStorage.getItem('token');
+    const userId = localStorage.getItem('userId');
+    
+    if (!token || !userId) {
+      // User is not authenticated
+      setShowSignInOverlay(true);
+      setLoading(false);
+      return;
+    }
+    
+    setIsAuthenticated(true);
     setTimeOptions(generateTimeOptions(availableTime));
+    setLoading(false);
   }, [availableTime]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!isAuthenticated) {
+      setShowSignInOverlay(true);
+      return;
+    }
+    
+    const userId = localStorage.getItem('userId');
+    const token = localStorage.getItem('token');
+    
+    const appointmentData = {
+      userId: userId,
+      doctorId: doctorId,
+      date: e.target.date.value,
+      time: e.target.time.value,
+    };
+  
+    try {
+      const response = await fetch("http://localhost:5000/appointments", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(appointmentData),
+      });
+      
+      if (response.status === 401) {
+        // Token is invalid or expired
+        localStorage.removeItem('token');
+        localStorage.removeItem('userId');
+        setIsAuthenticated(false);
+        setShowSignInOverlay(true);
+        return;
+      }
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to create appointment");
+      }
+  
+      const data = await response.json();
+      console.log("Appointment successfully created:", data);
+      alert("Appointment created successfully!");
+      navigate("/appointments");
+      
+    } catch (error) {
+      console.error("Error creating appointment:", error.message);
+      alert("Failed to create appointment. Please try again.");
+    }
+  };
+  
+  const handleCloseSignIn = () => {
+    // Navigate to sign-in page
+    navigate('/signin');
+  };
+
+  if (showSignInOverlay) {
+    return <SignInOverlay onClose={handleCloseSignIn} />;
+  }
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div className="make-appointment-page">
