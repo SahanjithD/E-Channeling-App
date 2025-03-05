@@ -77,7 +77,7 @@ namespace desktop {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/desktop;V1.0.0.0;component/editappointmentwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/desktop;component/editappointmentwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\EditAppointmentWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

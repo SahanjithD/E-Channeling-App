@@ -30,6 +30,28 @@ namespace desktop
 
         }
 
+        private void ClearPlaceholder(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            if (textBox != null && (textBox.Text == "Name" || textBox.Text == "Specialty"))
+            {
+                textBox.Text = "";
+            }
+        }
+
+        private void RestorePlaceholder(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            if (textBox != null && string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                if (textBox.Name == "NameTextBox")
+                    textBox.Text = "Name";
+                else if (textBox.Name == "SpecialtyTextBox")
+                    textBox.Text = "Specialty";
+            }
+        }
+
+
         private void MakeAppointmentButton_Click(object sender, RoutedEventArgs e)
         {
             MakeAppointmentWindow appointmentWindow = new MakeAppointmentWindow();
@@ -45,6 +67,11 @@ namespace desktop
             //{
             //    MessageBox.Show("Please select a doctor before making an appointment.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             //}
+        }
+
+        private void NameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
