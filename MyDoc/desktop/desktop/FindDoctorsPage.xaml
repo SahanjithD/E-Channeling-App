@@ -15,34 +15,37 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        
-        <TextBlock Text="Find Doctors"  Grid.Row="0"
+
+        <TextBlock Text="Find Doctors" Grid.Row="0"
                    FontSize="24" 
                    FontWeight="Bold" Foreground="#0078D7"
-           HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                   HorizontalAlignment="Center" Margin="0,0,0,20"/>
 
         <!-- Search Bar -->
         <StackPanel Orientation="Horizontal" 
                     HorizontalAlignment="Center" 
                     Margin="0,0,0,20"
                     Grid.Row="1">
-            <TextBox x:Name="NameTextBox" Width="250" Height="30" Margin="2" VerticalAlignment="Center"
-                     Text="Name" GotFocus="ClearPlaceholder" LostFocus="RestorePlaceholder"/>
-            <TextBox x:Name="SpecialtyTextBox" Width="250" Height="30" Margin="2" VerticalAlignment="Center"
-                     Text="Specialty" GotFocus="ClearPlaceholder" LostFocus="RestorePlaceholder"/>
+            <TextBox x:Name="NameTextBox" Width="200" Height="30" Margin="2" VerticalAlignment="Center"
+                     Text="Doctor Name" GotFocus="ClearPlaceholder" LostFocus="RestorePlaceholder"/>
+
+            <ComboBox x:Name="SpecialtyComboBox" Width="200" Height="30" Margin="2" VerticalAlignment="Center"
+                      DisplayMemberPath="Content"
+                      Text="Select Specialization"/>
+
             <Button Content="Search" Width="100" Height="30" Background="#0078D7" 
-            Foreground="White" Margin="10,0,0,0" Click="SearchButton_Click"/>
+                    Foreground="White" Margin="10,0,0,0" Click="SearchButton_Click"/>
         </StackPanel>
 
         <!-- Data Grid for Doctors -->
         <DataGrid x:Name="DoctorsDataGrid" 
                   Grid.Row="2"
-                  AutoGenerateColumns="True" 
-          Height="250" Width="600" HorizontalAlignment="Center"
-          SelectionMode="Single">
+                  Height="250" Width="600" HorizontalAlignment="Center"
+                  SelectionMode="Single">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Doctor Name" Binding="{Binding Name}" Width="*"/>
                 <DataGridTextColumn Header="Specialty" Binding="{Binding Specialty}" Width="*"/>
+                <DataGridTextColumn Header="Available Time" Binding="{Binding AvailableTime}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
 
@@ -50,7 +53,7 @@
         <Button Content="Make Appointment"
                 Grid.Row="3"
                 Width="200" Height="40" Background="#0078D7" 
-        Foreground="White" Margin="0,20,0,0" HorizontalAlignment="Center"
-        Click="MakeAppointmentButton_Click"/>
+                Foreground="White" Margin="0,20,0,0" HorizontalAlignment="Center"
+                Click="MakeAppointmentButton_Click"/>
     </Grid>
 </Page>

@@ -107,7 +107,7 @@ namespace desktop
                 {
                     try
                     {
-                        string token = App.Current.Properties["AuthToken"].ToString();
+                        string? token = App.Current.Properties["AuthToken"].ToString();
                         _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
                         string jsonContent = JsonSerializer.Serialize(selectedAppointment);
