@@ -74,7 +74,7 @@ namespace desktop
                     // Store the token (you might want to use a more secure storage method)
                     App.Current.Properties["AuthToken"] = loginResponse.token;
                     App.Current.Properties["UserId"] = loginResponse.id;
-                    MessageBox.Show(loginResponse.id.ToString());
+                    //MessageBox.Show(loginResponse.id.ToString());
                     
 
 

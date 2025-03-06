@@ -57,12 +57,12 @@ namespace desktop
                 httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
 
                 // Send PUT request to update appointment
-                MessageBox.Show($"JSON Sent: {jsonContent} Appoinment ID {_appointment.Id}");
+                //MessageBox.Show($"JSON Sent: {jsonContent} Appoinment ID {_appointment.Id}");
 
                 string apiUrl = $"http://localhost:5000/appointments/{_appointment.Id}";
                 HttpResponseMessage response = await httpClient.PutAsync(apiUrl, content);
 
-                MessageBox.Show($"Response: {response}");
+                //MessageBox.Show($"Response: {response}");
 
                 if (response.IsSuccessStatusCode)
                 {

@@ -13,7 +13,10 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Edit Appointment" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Grid.Row="0" Margin="0,0,0,10"/>
+        <TextBlock Text="Edit Appointment" FontSize="18" 
+                   Foreground="#0078D7" FontWeight="Bold"
+                   HorizontalAlignment="Center" Grid.Row="0" 
+                   Margin="0,0,0,10"/>
 
         <StackPanel Grid.Row="1">
             <Label Content="Doctor Name"/>
@@ -36,7 +39,9 @@
         </StackPanel>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-            <Button Content="Save" Width="80" Margin="5" Click="SaveChanges"/>
+            <Button Content="Save" Width="80" Margin="5" Click="SaveChanges"
+                    Background="#0078D7" 
+                Foreground="White"/>
             <Button Content="Cancel" Width="80" Margin="5" Click="CloseWindow"/>
         </StackPanel>
     </Grid>

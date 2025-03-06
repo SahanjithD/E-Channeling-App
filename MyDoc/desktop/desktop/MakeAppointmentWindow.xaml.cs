@@ -156,7 +156,7 @@ namespace desktop
                 string token = App.Current.Properties["AuthToken"].ToString();
                 httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
 
-                MessageBox.Show($"JSON Sent: {json} ");
+                //MessageBox.Show($"JSON Sent: {json} ");
 
                 var response = await httpClient.PostAsync("http://localhost:5000/appointments", content);
 

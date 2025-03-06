@@ -75,7 +75,7 @@ namespace desktop
 
         private void ClearPlaceholder(object sender, RoutedEventArgs e)
         {
-            TextBox textBox = sender as TextBox;
+            TextBox? textBox = sender as TextBox;
             if (textBox != null && textBox.Text == "Doctor Name")
             {
                 textBox.Text = "";
@@ -84,7 +84,7 @@ namespace desktop
 
         private void RestorePlaceholder(object sender, RoutedEventArgs e)
         {
-            TextBox textBox = sender as TextBox;
+            TextBox? textBox = sender as TextBox;
             if (textBox != null && string.IsNullOrWhiteSpace(textBox.Text))
             {
                 textBox.Text = "Doctor Name";
@@ -114,7 +114,7 @@ namespace desktop
                 if (response.IsSuccessStatusCode)
                 {
                     string jsonResponse = await response.Content.ReadAsStringAsync();
-                    List<Doctor> doctors = JsonSerializer.Deserialize<List<Doctor>>(jsonResponse,
+                    List<Doctor>? doctors = JsonSerializer.Deserialize<List<Doctor>>(jsonResponse,
                         new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
                     DoctorsDataGrid.ItemsSource = doctors;
